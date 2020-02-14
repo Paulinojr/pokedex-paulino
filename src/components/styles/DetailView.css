@@ -11,8 +11,8 @@
   }
   
   .sprite-image {
-    width: 80%;
-    height: 150px;
+    width: 205.994px;
+    height: 205.994px;
     margin: 10px auto;
     background-color: #585858;
     border: 15px solid #DEDEDE;
@@ -33,6 +33,7 @@
   
   .data-name {
     margin: 0 0 5px;
+    text-transform: capitalize;
   }
   
   .data-char {

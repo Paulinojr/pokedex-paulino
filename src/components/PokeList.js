@@ -1,17 +1,18 @@
 import React from 'react';
 import PokeCell from './PokeCell.js';
-import { pokeClasses } from '../pokeClasses.js';
 import './styles/PokeList.css';
 
-const PokeList = ({ handleOnClick }) => {
-    const cells = pokeClasses.map(pokeClass => {
-        return(
-            <PokeCell 
-                key={pokeClass.id} 
-                pokeClass={pokeClass}   
-                handleOnClick={handleOnClick}
-            />
-        );
+const PokeList = ({ handleOnClick, pokemonList }) => {
+    const cells = pokemonList.map(pokeClass => {
+        if(!isNaN(pokeClass.id)){
+            return(
+                <PokeCell 
+                    key={pokeClass.name} 
+                    pokeClass={pokeClass}   
+                    handleOnClick={handleOnClick}
+                />
+            );
+        } 
     });
     return (
         <section className="poke-list">
