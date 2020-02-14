@@ -3,7 +3,7 @@ import './styles/DetailView.css';
 import silhouette from '../assets/silhouette.png'
 
 const DetailView = ({ pokemon }) => {
-    const { name, sprite, type, height, weight, locationAreaEncounters } = pokemon;
+    const { name, sprite, type, height, weight } = pokemon;
     return (
         <section className="detail-view">
             <img src={sprite ? sprite : silhouette} className={sprite ? 'sprite-image' : 'sprite-image sprite-silhouette'} alt="sprite"/>

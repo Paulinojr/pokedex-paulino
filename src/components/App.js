@@ -18,7 +18,11 @@ class App extends Component {
 
   handleOnClick(id) {
 
-    fetch(`http://pokeapi.co/api/v2/pokemon/${id}/`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
       .then(res => res.json())
       .then(data => {
         let pokemon = new Pokemon(data);
@@ -28,7 +32,11 @@ class App extends Component {
   }
 
   componentDidMount() { 
-    fetch('http://pokeapi.co/api/v2/pokemon/?limit=151&')
+    fetch('https://pokeapi.co/api/v2/pokemon/?limit=151&', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
       .then(res => res.json())
       .then(data => {
         data.results.map((pokemon) => {
